@@ -10,5 +10,10 @@ class starter {
 		// the string "I love to learn coding remotely." will appear in
 		// the command window when you compile and run this program.
 		System.out.print("I love to learn coding remotely."); 
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+String text = sc.nextLine();
+int number = sc.nextInt();
+double number = sc.nextDouble();
 	}
 }
