@@ -11,9 +11,18 @@ class starter {
 		Scanner input = new Scanner(System.in);
 		// the string "I love to learn coding remotely." will appear in
 		// the command window when you compile and run this program.
-		System.out.print("Type a random number for math."); 
+		int secret = (int)(Math.random() * 1000) + 1;
+		System.out.println("(secret: " + secret + ")");
 
-		System.out.println("(secret: "+secret+")");
-		int g = (int)(Math.random() * 1000)+1;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("(secret: " + secret + ")");
+		int guess = sc.nextInt();
+
+		if (guess == secret) {
+			System.out.println("Correct!");
+		} else {
+			System.out.println("Incorrect"); 
+		}
+
 	}
 }
