@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author: Armen Sargsyan 
+ *  Date: 10/6/2026
 */
 
 import java.util.Scanner;
@@ -10,6 +10,12 @@ class starter {
 	public static void main(String args[]) {
 		// the string "I love to learn coding remotely." will appear in
 		// the command window when you compile and run this program.
-		System.out.print("I love to learn coding remotely."); 
+		Scanner input = new Scanner(Scanner);
+		System.out.print("Would you like to be a Wizard, Warrior, or Rogue?"); 
+
+		String role = input(Warrior);
+
+		System.out.println("You've chosen the Warrior! For honor!");
 	}
+		role == "Warrior",
 }
