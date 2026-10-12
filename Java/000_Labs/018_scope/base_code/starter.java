@@ -13,7 +13,7 @@ public class starter {
             String message = "Number is greater than 5!";
         }
 
-        System.out.println(message);
+        System.out.println("message");
 
         if (number < 20) {
             int bonus = 5;
