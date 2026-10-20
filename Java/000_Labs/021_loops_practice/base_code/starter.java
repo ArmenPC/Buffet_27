@@ -15,13 +15,16 @@ class starter {
 	System.out.println("(secret: " + secret + ")");
 
 	while (true) {
-		System.out.print("Please guess a number: ");
-	} int guess = input.nextInt();
-
-
-
-
-
-		
+		System.out.print("Please guess a number: "); 
+		int guess = input.nextInt();
+		if (guess == secret) {
+			System.out.println("You got the number!");
+			break;
+		} else if (guess < secret) {
+			System.out.println("The number is higher.");
+		} else {
+			System.out.println("The number is lower.");
+		}
+	}
 	}
 }
