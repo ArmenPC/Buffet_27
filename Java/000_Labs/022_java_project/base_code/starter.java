@@ -35,5 +35,37 @@ class starter {
 			} else {
 				System.out.println("That wasn't quite the correct answer. Try again.");
 			}
+
+			System.out.print("You have $" + money + ". How much would you like to wager? ");
+			int wager = input.nextInt();
+			input.nextLine();
+
+			while (wager <= 0 || wager > money) {
+				if (wager <= 0) {
+					System.out.print("Sneaky! No negatives for 0! Please enter a new wager: ");
+				} else {
+					System.out.print("You only have $" + money + "! Please enter a smaller number: ");
+				}
+				
+				wager = input.nextInt();
+					input.nextLine();
+			}
+
+			if (roll1 == roll2 && roll2 = roll3) {
+				money = money + wager * 2;
+				System.out.println("JACKPOT! Your wager has been tripled!");
+			} else if(roll1 == roll2 || roll2 == roll3 || roll1 == roll3) {
+				money = money + wager;
+				System.out.println("You won! Your wager has been doubled!");
+			} else {
+				money = money - wager;
+				System.out.println("Didn't win this time, better luck next time!");
+			}
+			System.out.println("You now have $" + money + ".");
+
+			if (money == 0) {
+				System.out.println("You've run out of money! Thanks for coming! Come back soon!");
+				break;	
+			}
 	}
 }
