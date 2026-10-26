@@ -24,7 +24,7 @@ class starter {
 				System.out.println("-------------------------------------------------;");
 				System.out.println("Would you like to play the slots? (Yes/yes/Y/y): ");
 				String answer = input.nextLine();
-			}
+			
 
 			if (answer.equals("Yes") || answer.equals("yes") || answer.equals("Y") || answer.equals("y")) {
 				// the game goes here
@@ -51,7 +51,13 @@ class starter {
 					input.nextLine();
 			}
 
-			if (roll1 == roll2 && roll2 = roll3) {
+			int roll1 = (int)(Math.random() * 10) + 1;
+			int roll2 = (int)(Math.random() * 10) + 1;
+			int roll3 = (int)(Math.random() * 10) + 1;
+
+			System.out.println("Your rolls are: | " + roll1 + " | " + roll2 + " | " + roll3 + " |");
+
+			if (roll1 == roll2 && roll2 == roll3) {
 				money = money + wager * 2;
 				System.out.println("JACKPOT! Your wager has been tripled!");
 			} else if(roll1 == roll2 || roll2 == roll3 || roll1 == roll3) {
@@ -67,5 +73,6 @@ class starter {
 				System.out.println("You've run out of money! Thanks for coming! Come back soon!");
 				break;	
 			}
+		}
 	}
 }
